@@ -1,0 +1,26 @@
+// déclarer que nous faisons du Java ;
+plugins{
+    id 'java'
+}
+
+// indiquer que nos dépendances viennent de Maven Central ;
+repositories{
+    mavenCentral()
+}
+
+// configurer Java 21 ;
+java{
+    toolchain{
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+// configurer les tests avec JUnit Jupiter.
+testing{
+    suites{
+        test{
+            useJUnitJupiter('6.0.1')
+        }
+    }
+}
+
