@@ -8,6 +8,15 @@ repositories{
     mavenCentral()
 }
 
+// configurer les tests avec JUnit Jupiter.
+dependencies {
+    testImplementation platform('org.junit:junit-bom:6.0.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+
 // configurer Java 21 ;
 java{
     toolchain{
@@ -15,12 +24,8 @@ java{
     }
 }
 
-// configurer les tests avec JUnit Jupiter.
-testing{
-    suites{
-        test{
-            useJUnitJupiter('6.0.1')
-        }
-    }
+
+test {
+    useJUnitPlatform()
 }
 

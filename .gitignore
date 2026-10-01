@@ -1,9 +1,17 @@
+# java
+*.class
+/build/
 
-# Ignore Gradle project-specific cache directory
-.gradle
 
-# Ignore Gradle build output directory
-build
+# Gradle
+.gradle/
 
-# Ignore Kotlin plugin data
-.kotlin
+
+# VSCode
+.vscode/
+.env
+
+
+# OS 
+.DS_Store
+Thumbs.db
